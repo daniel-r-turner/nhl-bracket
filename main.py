@@ -61,13 +61,10 @@ def create_league() -> None:
     )
 
     league_leaderboard = league.leaderboard()
-
     # Output standings and save each player's bracket
     print(f"--- {league.name} Scoreboard ---")
-    for position, (bracket, score) in enumerate(
-        league_leaderboard.items(), start=1
-    ):
-        print(f"{position}, {bracket.name} with {score} points")
+    for rank, bracket, score in league_leaderboard:
+        print(f"{rank}, {bracket.name} with {score} points")
         bracket.draw_bracket(
             filename=f"{bracket.name}_Bracket.png",
             colour_lines=True,

@@ -5,8 +5,7 @@ Defines the `League` class for managing a fantasy‐style playoff pool, includin
 and leaderboard generation.
 """
 
-from collections import defaultdict
-from typing import DefaultDict, Dict, List
+from typing import Dict, List, Tuple
 
 from bracket_node import BracketNode
 from round import Round
@@ -105,14 +104,26 @@ class League:
 
         return incorrect
 
-    def leaderboard(self) -> Dict[Bracket, int]:
+    def leaderboard(self) -> List[Tuple[int, Bracket, int]]:
         """
         Generates a sorted leaderboard of player scores.
 
-        :returns: Dict mapping a `Bracket` instance to a score, sorted descending by score.
+        :returns: A list of tuples (rank, Bracket, score), sorted by score descending.
         """
-        scores = {bracket: self.score_bracket(bracket) for bracket in self.brackets}
-        sorted_scores = dict(
-            sorted(scores.items(), key=lambda kv: kv[1], reverse=True)
-        )
-        return sorted_scores
+        scores = {br: self.score_bracket(br) for br in self.brackets}
+        sorted_scores = sorted(scores.items(), key=lambda kv: kv[1], reverse=True)
+
+        ranked: List[Tuple[int, Bracket, int]] = []
+        last_score = None
+        last_rank = 0
+
+        for idx, (br, score) in enumerate(sorted_scores, start=1):
+            if score != last_score:
+                rank = idx
+                last_score = score
+                last_rank = rank
+            else:
+                rank = last_rank
+            ranked.append((rank, br, score))
+
+        return ranked
