@@ -70,7 +70,7 @@ def create_league() -> None:
             colour_lines=True,
             league=league
         )
-    print(f"Bracket results available at {Path.cwd() / "bracket_results"}")
+    print(f"Bracket results available at {Path.cwd() / 'bracket_results'}")
 
 
 def ask_choice(prompt: str, choices: Tuple[str, str]) -> str:
