@@ -79,11 +79,6 @@ nhl-bracket/
 
 <br>
 
-- **Q:** Can I run this without a virtual environment?  
-  **A:** Yes, but using one avoids conflicts with other Python projects on your machine.
-
-<br>
-
 - **Q:** How do I update to the latest version?  
   **A:** Inside your repo folder, run:
   ```bash
