@@ -17,7 +17,7 @@ A Python tool to manage NHL playoff bracket predictions, track scores, and gener
 
 - Python 3.8+  
 - `pip`  
-- (Optionally) `git` for cloning the repository  
+- `git` for cloning the repository  
 
 Python libraries (auto-installed via `requirements.txt`):  
 - Pillow  
