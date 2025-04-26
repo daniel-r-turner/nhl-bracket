@@ -35,7 +35,7 @@ git clone https://github.com/daniel-r-turner/nhl-bracket.git && cd nhl-bracket &
 Or:
 - Click the green **Code** button
 - Select **Download ZIP** and extract it locally
-- Open the NHLBracket folder in Command Prompt
+- Open the nhl-bracket-main folder in Command Prompt
 - Run `setup.bat`
 
 ### 2. Mac/Linux Command
@@ -45,7 +45,7 @@ git clone https://github.com/daniel-r-turner/nhl-bracket.git && cd nhl-bracket &
 Or:
 - Click the green **Code** button
 - Select **Download ZIP** and extract it locally
-- Open the NHLBracket folder in Terminal
+- Open the nhl-bracket-main folder in Terminal
 - Give the setup script permission to execute: `chmod +x setup.sh`
 - Run `./setup.sh`
 
