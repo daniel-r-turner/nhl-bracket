@@ -50,7 +50,7 @@ Or:
 - Run `./setup.sh`
 
 ### 3. After installation
-- To run the program again, simply open the `nhl-bracket-main` folder in Command Prompt / Terminal, and run `main.py`
+- To run the program again, simply open the `nhl-bracket-main` folder in Command Prompt / Terminal, and run `python main.py` or `python3 main.py`
 
 ---
 
