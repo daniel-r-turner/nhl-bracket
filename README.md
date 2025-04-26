@@ -17,7 +17,7 @@ A Python tool to manage NHL playoff bracket predictions, track scores, and gener
 
 - Python 3.8+  
 - `pip`  
-- `git` for cloning the repository  
+- (Optionally) `git` for cloning the repository  
 
 Python libraries (auto-installed via `requirements.txt`):  
 - Pillow  
@@ -32,11 +32,23 @@ Python libraries (auto-installed via `requirements.txt`):
 ```bash
 git clone https://github.com/daniel-r-turner/nhl-bracket.git && cd nhl-bracket && setup.bat
 ```
+Or:
+- Click the green **Code** button
+- Select **Download ZIP** and extract it locally
+- Open the NHLBracket folder in Command Prompt
+- Run `setup.bat`
 
 ### 2. Mac/Linux Command
 ```bash
 git clone https://github.com/daniel-r-turner/nhl-bracket.git && cd nhl-bracket && chmod +x setup.sh && ./setup.sh
 ```
+Or:
+- Click the green **Code** button
+- Select **Download ZIP** and extract it locally
+- Open the NHLBracket folder in Terminal
+- Give the setup script permission to execute: `chmod +x setup.sh`
+- Run `./setup.sh`
+
 ---
 
 ## 🗂 Project Structure
