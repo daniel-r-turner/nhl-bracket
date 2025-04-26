@@ -14,7 +14,7 @@ from matplotlib.lines import Line2D
 from round import Round
 from team import Team
 from pathlib import Path
-from typing import Dict, List, Tuple, Union
+from typing import Dict, List, Union
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
