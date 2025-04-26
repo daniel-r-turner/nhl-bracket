@@ -168,9 +168,16 @@ def get_player_brackets(empty_bracket: Bracket) -> List[Bracket]:
     :param empty_bracket: A Bracket instance with no winners set.
     :returns: A list of Bracket instances populated with each player's picks.
     """
-    num_brackets = int(
-        input("Enter the number of players in the Fantasy League: ")
-    )
+    while True:
+        try:
+            num_brackets = int(
+                input("Enter the number of players in the Fantasy League: ")
+            )
+            if num_brackets > 0:
+                break
+        except ValueError:
+            pass
+        print("The number of players in the league must be a positive integer! Try again")
     names: Set[str] = set()
     brackets: List[Bracket] = []
 
@@ -244,9 +251,17 @@ def prompt_points() -> Dict[Round, int]:
         Round.CONFERENCE_FINALS,
         Round.STANLEY_CUP_FINALS
     ]
-    return {
-        rnd: int(input(f"{points_prompt} {rnd.name.replace('_', ' ').title()}: ")) for rnd in round_order
-    }
+    results = {}
+    for rnd in round_order:
+        while True:
+            try:
+                value = int(input(f"{points_prompt} {rnd.name.replace('_', ' ').title()}: "))
+                results[rnd] = value
+                break
+            except ValueError:
+                print("Invalid input. Please enter a valid integer.")
+    return results
+
 
 if __name__ == "__main__":
     create_league()
