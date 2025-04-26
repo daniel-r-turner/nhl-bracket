@@ -49,10 +49,10 @@ Or:
 - Give the setup script permission to execute: `chmod +x setup.sh`
 - Run `./setup.sh`
 
----
-
 ### 3. After installation
 - To run the program again, simply open the `nhl-bracket-main` folder in Command Prompt / Terminal, and run `main.py`
+
+---
 
 ## 🗂 Project Structure
 ```graphql
